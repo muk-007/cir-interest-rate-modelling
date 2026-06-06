@@ -74,15 +74,6 @@ $$y(r_t,\tau) = \frac{B(\tau)\,r_t - \ln A(\tau)}{\tau}$$
 
 **Calibration — Kalman Filter MLE:** Since $r_t$ is latent, the model is cast as a state-space system. The affine yield formula is linear in $r_t$, so a standard linear Kalman Filter applies exactly. The Gaussian log-likelihood accumulated across all observations is maximised over $(\kappa, \theta, \sigma)$ using L-BFGS-B.
 
-Calibrated parameters:
-
-| Parameter | Value | Interpretation |
-|---|---|---|
-| $\kappa$ | 0.1364 | Mean-reversion half-life ≈ 5.1 years |
-| $\theta$ | 0.0249 (2.49%) | Long-run equilibrium rate |
-| $\sigma$ | 0.0386 | Volatility coefficient |
-| Feller condition $2\kappa\theta/\sigma^2$ | ≈ 4.6 | ✓ Satisfied — rates cannot reach zero |
-
 KF-MLE was chosen over OLS because OLS on first differences treats each tenor independently, conflating measurement noise with diffusion variance and systematically overestimating σ while underestimating κ. KF-MLE jointly processes all nine tenors simultaneously, separating the latent $r_t$ signal from noise.
 
 ### C · Yield Curve Prediction
