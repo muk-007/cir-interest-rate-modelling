@@ -23,7 +23,7 @@ where $\kappa$ is the speed of mean reversion, $\theta$ is the long-run equilibr
 
 ```
 .
-├── financeproject.ipynb     # Main notebook (all code + markdown analysis)
+├── ratemodellingproject.ipynb     # Main notebook (all code + markdown analysis)
 ├── train_data.csv           # Training data: 9 maturities, May 2016 – Apr 2024 (1,976 days)
 ├── test_data.csv            # Test data:     5 maturities, Apr 2024 – Apr 2026 (495 days)
 ├── test_data_3M.csv         # 3M yield only — sole input for out-of-sample prediction
